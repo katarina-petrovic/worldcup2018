@@ -26,5 +26,12 @@
                 <input type="submit" name="display_matches" value="Display Matches Sorted By Temperature"/>
             </form>
         </div>
+
+        <div class="display-matches">
+            <h3>Delete all data and test again</h3>
+            <form action="delete_data.php" method="POST">
+                <input type="submit" name="delete_all_data" value="Delete All Data"/>
+            </form>
+        </div>
     </body>
 </html>
