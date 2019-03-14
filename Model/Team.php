@@ -174,7 +174,24 @@ class Team {
             $all_results[] = $row;
         }
 
-        echo json_encode($all_results);
+        return json_encode($all_results);
+    }
+
+    /*
+     * delete all teams
+     * 
+     * 
+     * @return  boolean
+     * @access  public
+     */
+
+    public function delete() {
+        $sql = "DELETE FROM teams";
+        if ($this->db_connect->conn->query($sql)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }

@@ -316,7 +316,7 @@ class Match {
             } else {
                 return false;
             }
-        } else  {
+        } else {
             return true;
         }
     }
@@ -342,6 +342,24 @@ class Match {
             $all_results[] = $row;
         }
         return $all_results;
+    }
+
+    /*
+     * delete all matches
+     * 
+     * all data from other tables will be deleted also (except table teams)
+     * 
+     * @return  boolean
+     * @access  public
+     */
+
+    public function delete() {
+        $sql = "DELETE FROM matches";
+        if ($this->db_connect->conn->query($sql)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }
